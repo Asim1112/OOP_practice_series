@@ -4,28 +4,6 @@
 # the object iterable in a for-loop, counting down to 0.
 
 
-class CountUpToThree():
-    def __init__(self):
-        self.counter = 1
-
-
-    def __iter__(self):             # The Iterator Starter
-        return self
-    
-    
-    def __next__(self):             # The Next Value Provider (Each time the for loop needs a new value, Python calls this method.)
-        if self.counter <= 3:
-            current = self.counter
-            self.counter += 1
-            return current
-        else:
-            raise StopIteration
-        
-for numbers in CountUpToThree():
-    print(numbers)
-
-
-
 
 
 class CountDown():
